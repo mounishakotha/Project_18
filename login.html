@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>login</title>
+<style>
+body{
+	/*--background-color: #4d0000;*/
+	background: linear-gradient(black, #660000);	/*#4d0000*/
+	background-size: 600% 600%;
+	/*background-repeat:no-repeat;
+	background-size: cover;*/
+}
+.pos{
+	color:black;
+	padding: 7px;
+}
+.banner{
+	/*background-color: black;*/
+	padding: 3px;
+	text-align:center;
+	color: white;
+	font-size:50px;
+}
+.but{
+	font-size: 20px;
+	background-color: #008CBA; /*blue*/
+	padding: 15px 15px;
+	border: none;
+	color: white;
+	border-radius: 25%;
+	transition-duration: 0.2s;
+	cursor: pointer;
+}
+.but:hover{
+	background-color: white;
+	color:#008CBA;
+	border: 1px solid #008CBA;
+}
+table.t1{
+	/*float: right;*/
+	border: 1px solid white;
+	padding: 5px;
+	position: absolute;
+	top:30%;
+	left:65%;
+}
+table.t2{
+	border: 1px solid white;
+	padding: 5px;
+	position: absolute;
+	top:30%;
+	left:15%;
+}
+td,tr{
+  border: none;
+  text-align:center;
+  padding:10px;
+}
+tr:hover{
+	background-color: #000033; 
+}
+
+</style>
+</head>
+<body>
+<div class="banner">
+<p><img src="https://i2.wp.com/blog.talenox.com/wp-content/uploads/2014/10/DBS_Bank_Logo.svg_.png?fit=900%2C375&quality=95&ssl=1" align="left" height="15%" width="15%">
+Welcome to Self-Service Kiosk</p>
+</div>
+<form action="login.jsp" method="post">
+<table class="t1">
+<caption style="color:white; font-size:30px; padding:5px;">Login to Enter</caption>
+<tr>
+<td><p style="text-align:center; color:white; font-size:20px;">Username</p></td>
+<td><input type="text" name="user" required></td>
+</tr>
+<tr>
+<td><p style="text-align:center; color:white; font-size:20px;">Password</p></td>
+<td><input type="password" name="pass" required></td>
+</tr>
+<tr>
+<td  colspan="2"><button class="but" type="submit">Login</button></td>
+</tr>
+</table>
+</form>
+
+<form action="register.jsp" method="post">
+<table class="t2">
+<caption style="color:white; font-size:30px; padding:5px;">Sign up</caption>
+<tr>
+<td><p style="text-align:center; color:white; font-size:20px;">Username</p></td>
+<td><input type="text" name="user" required></td>
+</tr>
+<tr>
+<td><p style="text-align:center; color:white; font-size:20px;">Password</p></td>
+<td><input type="password" name="pass" required></td>
+</tr>
+<tr>
+<td><p style="text-align:center; color:white; font-size:20px;">Email ID</p></td>
+<td><input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required></td>
+</tr>
+<tr>
+<td><p style="text-align:center; color:white; font-size:20px;">Phone Number</p></td>
+<td><input type="text" name="numb" required></td>
+</tr>
+<tr>
+<td><p style="text-align:center; color:white; font-size:20px;">Position</p></td>
+<td><select class="pos" name="pos">
+  <option value="customer">Customer/Retailer</option>
+  <option value="staff">Operation Staff</option>
+  <option value="head">Operation Head</option>
+</select></td>
+</tr>
+<tr>
+<td  colspan="2"><button class="but" type="submit">Register</button></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

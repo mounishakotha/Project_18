@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body{
+	/*background-image: url("paste image address here");*/
+	background-color: #990000;
+}
+.button{
+	font-size: 18px;
+	background-color: #008CBA; /*blue*/
+	padding: 20px 20px;
+	border: none;
+	color: white;
+	border-radius: 25%;
+	transition-duration: 0.2s;
+	cursor: pointer;
+	right: 3%;
+	top: 3%;
+	position:absolute;
+}
+.button:hover{
+	background-color: white;
+	color:#008CBA;
+	border: 1px solid #008CBA;
+}
+table{
+	position: fixed;
+	top:23%;
+	left:35%;
+}
+td,tr{
+	font-size:25px;
+	color: white;
+	padding: 10px;
+	
+}
+.drop_down{
+	font-size:15px;
+	padding: 7px;
+	color:black;
+	background-color:#f2f2f2;
+}
+#lend{
+	background-color:#a6a6a6;
+	border:2px solid black;
+	font-size: 20px;
+	border-radius: 20px;
+	padding:10px;
+}
+#lend:hover{
+	background-color: #bfbfbf;
+	font-size: 20px;
+	border-radius: 20px;
+	border: 5px solid #999999;
+	padding:10px;
+	cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+<form action="raise_customer.jsp" method="post">
+<table>
+<tr>
+<td>Service request </td><td><input type="text" name="req"></td>
+</tr>
+<tr>
+<td>Type</td><td><select name="type" class="drop_down">
+            <option value="A">New pin request</option>
+            <option value="B">Block credit card</option>
+            <option value="C">Incorrect transaction</option>
+            <option value="D">Statement request</option>
+            <option value="other">Others</option>
+</select></td>
+</tr>
+<tr>
+<td>Remarks</td><td><input type="text" name="remarks"/></td>
+</tr>
+
+<tr>
+<td colspan="2" align="center"><input type="submit" id="lend" value="Raise a request"/></td>
+</tr>
+</table>
+</form>
+<form action="customer.jsp" method="post">
+<button class="button">Home Page</button>
+</form>
+</body>
+</html>
